@@ -1,0 +1,81 @@
+<?php
+include 'includes/config.php';
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nadara</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <h2>Nadara</h2>
+    <div class="nav-links">
+        <a href="index.php">Home</a>
+        <a href="cart.php">Cart 🛒</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <h1>Discover Your Beauty 🌿</h1>
+    <p class="subtitle">Natural products for your glow</p>
+</section>
+
+<!-- Categories -->
+<div class="categories">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('1')">Cleanser</button>
+    <button onclick="filterProducts('3')">Serum</button>
+    <button onclick="filterProducts('4')">Cream</button>
+    <button onclick="filterProducts('5')">Sunscreen</button>
+    <button onclick="filterProducts('2')">Toner</button>
+    <button onclick="filterProducts('6')">Mask</button>
+</div>
+
+<!-- Products -->
+<div class="products">
+
+<?php
+$sql = "SELECT * FROM products";
+$result = mysqli_query($conn, $sql);
+
+while($row = mysqli_fetch_assoc($result)) {
+?>
+
+    <div class="card" data-category="<?php echo $row['category_id']; ?>">
+        <a href="product_details.php?id=<?php echo $row['product_id']; ?>">
+            <img src="images/<?php echo $row['image']; ?>">
+            <h3><?php echo $row['name']; ?></h3>
+            <p><?php echo $row['price']; ?> SAR</p>
+        </a>
+    </div>
+
+<?php } ?>
+
+</div>
+
+<!-- Filter -->
+<script>
+function filterProducts(category) {
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        if (category === 'all') {
+            card.style.display = "block";
+        } else {
+            if (card.getAttribute("data-category") === category) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        }
+    });
+}
+</script>
+
+</body>
+</html>

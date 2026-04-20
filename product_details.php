@@ -266,7 +266,7 @@ if(isset($_POST['add'])) {
                             Add to Cart
                         </button>
 
-                        <a href="cart.php" class="btn">
+                        <a href="checkout.php" class="btn">
                             Checkout
                         </a>
                     </div>

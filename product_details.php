@@ -142,24 +142,28 @@ if(isset($_POST['add'])) {
             gap: 16px;
             flex-wrap: wrap;
             margin-bottom: 34px;
+            align-items: stretch;
         }
-
-        
 
         .btn {
             background-color: var(--primary);
             color: black;
             border: none;
-            padding: 16px 28px;
+            padding: 0 28px;         
+            height: 48px;           
             border-radius: 16px;
             font-size: 18px;
             cursor: pointer;
             text-decoration: none;
-            display: inline-block;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
             transition: var(--transition);
             font-weight: 600;
         }
-
+        
         .btn:hover {
             background-color: var(--primary-hover);
         }

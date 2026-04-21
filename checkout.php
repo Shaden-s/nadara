@@ -33,6 +33,9 @@ if(isset($_POST['update'])) {
 
 <h2 style="padding:20px;">Shopping Cart</h2>
 
+<!-- 🔙 Back Button -->
+<a href="index.php" class="back-btn">← Back to Home</a>
+
 <div class="cart">
 
 <?php
@@ -94,6 +97,9 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
     </form>
 
     <button onclick="alert('Order placed successfully!')">Buy</button>
+
+    <!-- Continue shopping -->
+    <a href="index.php" class="btn">Continue Shopping</a>
 
 </div>
 

@@ -15,7 +15,7 @@ include 'includes/config.php';
     <h2>Nadara</h2>
     <div class="nav-links">
         <a href="index.php">Home</a>
-        <a href="cart.php">Cart 🛒</a>
+        <a href="checkout.php">Shopping Cart 🛒</a>
     </div>
 </nav>
 

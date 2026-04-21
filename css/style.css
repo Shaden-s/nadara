@@ -127,7 +127,7 @@ body {
   padding: 5px;
 }
 
-/* GLOBAL BUTTON */
+
 .btn {
   background: var(--primary);
   border: none;
@@ -136,21 +136,26 @@ body {
   cursor: pointer;
   text-decoration: none;
   color: black;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   gap: 6px;
-  transition: 0.25s ease;
   font-size: 14px;
   min-height: 38px;
   line-height: 1;
+
+  transition: 0.25s ease;
+  box-sizing: border-box;
 }
 
 .btn:hover {
   transform: translateY(-2px);
+  opacity: 0.95;
 }
 
-/* SECONDARY BUTTON */
+
 .secondary {
   background: transparent;
   border: 1.5px solid #e0bfc3;
@@ -161,18 +166,18 @@ body {
   background: #f8e7e9;
 }
 
-/* DELETE ITEM  */
+
 .danger {
-  background: #f3c7ca;
-  color: #6b2a2a;
-  border: 1px solid #e3aeb3;
+  background: #f2b9bd;
+  color: #5a2323;
+  border: 1px solid #e0a3a8;
 }
 
 .danger:hover {
   background: #efb6bb;
 }
 
-/* DELETE ALL */
+
 .danger-all {
   background: #e3a6ab;
   color: white;
@@ -182,35 +187,24 @@ body {
   background: #d99298;
 }
 
-/* CART */
-.cart {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.cart-item {
-  background: var(--card);
-  padding: 15px;
-  border-radius: 15px;
-}
-
-.cart-item img {
-  width: 120px;
-  border-radius: 10px;
-}
 
 .cart-item a {
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* SUMMARY */
-.summary {
-  margin: 20px;
-  padding: 15px;
-  background: var(--card);
-  border-radius: 15px;
+.cart-item .danger {
+  margin-top: 10px;
+}
+
+
+.cart-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
 }
 
 .summary-actions {
@@ -221,25 +215,14 @@ body {
   align-items: center;
 }
 
-/* LAYOUT FIX */
-.cart-actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
+.cart-actions .btn,
+.summary-actions .btn {
+  height: 38px;
 }
 
-/* PAGE TITLE */
-.page-title {
-  padding: 20px;
-}
-
-/* TOP ACTIONS */
-.top-actions {
-  margin: 0 20px;
-}
-
-/* EMPTY CART */
-.empty {
-  padding: 20px;
-  color: #666;
+.btn {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }

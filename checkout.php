@@ -19,6 +19,9 @@ if(isset($_POST['update'])) {
     $qty = $_POST['qty'];
     $_SESSION['cart'][$index]['qty'] = $qty;
 }
+
+// check cart status
+$cart_empty = !isset($_SESSION['cart']) || empty($_SESSION['cart']);
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +47,7 @@ if(isset($_POST['update'])) {
 <?php
 $total = 0;
 
-if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+if(!$cart_empty) {
 
     foreach($_SESSION['cart'] as $index => $item) {
 
@@ -97,11 +100,12 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
     <div class="summary-actions">
 
         <form method="post">
-            <button name="clear" class="btn danger-all">Clear Cart</button>
+            <button name="clear" class="btn danger-all" <?php echo $cart_empty ? 'disabled' : ''; ?>>
+                Clear Cart
+            </button>
         </form>
 
-        <!-- FIXED BUTTON -->
-        <button class="btn primary-btn" onclick="alert('Order placed successfully!')">
+        <button class="btn primary-btn" onclick="buyNow(<?php echo $cart_empty ? 'true' : 'false'; ?>)">
             Buy Now
         </button>
 
@@ -110,6 +114,16 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
     </div>
 
 </div>
+
+<script>
+function buyNow(isEmpty) {
+    if(isEmpty) {
+        alert("Your cart is empty 🛒");
+    } else {
+        alert("Order placed successfully!");
+    }
+}
+</script>
 
 </body>
 </html>

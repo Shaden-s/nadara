@@ -30,15 +30,12 @@ if(isset($_POST['update'])) {
 
 <body>
 
-<!-- Header -->
 <h2 class="page-title">Shopping Cart</h2>
 
-<!-- Top actions -->
 <div class="top-actions">
     <a href="index.php" class="btn secondary">← Continue Shopping</a>
 </div>
 
-<!-- Cart -->
 <div class="cart">
 
 <?php
@@ -59,7 +56,6 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
         $total += $item_total;
 ?>
 
-<!-- Item Card -->
 <div class="cart-item">
 
     <img src="images/<?php echo $row['image']; ?>">
@@ -70,14 +66,12 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
         <p>Total: <?php echo $item_total; ?> SAR</p>
     </div>
 
-    <!-- Update -->
     <form method="post" class="cart-actions">
         <input type="hidden" name="index" value="<?php echo $index; ?>">
         <input type="number" name="qty" value="<?php echo $qty; ?>" min="1" class="qty">
         <button name="update" class="btn">Update</button>
     </form>
 
-    <!-- Delete -->
     <a href="checkout.php?delete=<?php echo $index; ?>" class="btn danger">Remove</a>
 
 </div>
@@ -91,24 +85,20 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 
 </div>
 
-<!-- Summary -->
 <div class="summary">
 
     <h3>Total Price: <?php echo $total; ?> SAR</h3>
 
     <div class="summary-actions">
 
-        <!-- Clear all -->
         <form method="post">
             <button name="clear" class="btn danger-all">Clear Cart</button>
         </form>
 
-        <!-- Buy -->
         <button class="btn primary-btn" onclick="alert('Order placed successfully!')">
             Buy Now
         </button>
 
-        <!-- Continue -->
         <a href="index.php" class="btn secondary">Continue Shopping</a>
 
     </div>

@@ -8,131 +8,178 @@
 }
 
 body {
-    margin: 0;
-    font-family: Arial;
-    background: var(--background);
+  margin: 0;
+  font-family: Arial;
+  background: var(--background);
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background: #f8e4e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #f8e4e6;
 }
 
 .nav-links {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .navbar a {
-    text-decoration: none;
-    color: var(--text);
+  text-decoration: none;
+  color: var(--text);
 }
 
-/* Hero */
+/* HERO */
 .hero {
-    text-align: center;
-    padding: 70px 20px 30px;
+  text-align: center;
+  padding: 70px 20px 30px;
 }
 
 .hero h1 {
-    font-size: 42px;
+  font-size: 42px;
 }
 
 .subtitle {
-    font-size: 18px;
-    color: gray;
+  font-size: 18px;
+  color: gray;
 }
 
-/* Categories */
+/*  CATEGORIES */
 .categories {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px;
 }
 
 .categories button {
-    background: #f3d6d8;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 20px;
-    cursor: pointer;
+  background: #f3d6d8;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
-/* Products */
+/*  PRODUCTS */
 .products {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 40px;
 }
 
-/* Card */
+/* CARD */
 .card {
-    background: var(--white);
-    width: 220px;
-    padding: 15px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    transition: 0.3s;
+  background: var(--white);
+  width: 220px;
+  padding: 15px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .card a {
-    text-decoration: none;
-    color: var(--text);
+  text-decoration: none;
+  color: var(--text);
 }
 
 .card img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 15px;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
 .card p {
-    color: var(--primary);
-    font-weight: bold;
+  color: var(--primary);
+  font-weight: bold;
 }
 
-/* Product page */
+/*  PRODUCT PAGE */
 .product-container {
-    padding: 40px;
-    display: flex;
-    gap: 40px;
-    align-items: center;
+  padding: 40px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
 .product-img {
-    width: 300px;
-    border-radius: 20px;
+  width: 300px;
+  border-radius: 20px;
 }
 
 .price {
-    color: var(--primary);
+  color: var(--primary);
 }
 
 .qty {
-    width: 60px;
-    padding: 5px;
+  width: 60px;
+  padding: 5px;
 }
 
+/* GLOBAL BUTTON */
 .btn {
-    background: var(--primary);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
+  background: var(--primary);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: 0.25s ease;
+  font-size: 14px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* CHECKOUT ONLY BUTTON FIXES */
+
+/* secondary (Back / Continue) */
+.secondary {
+  background: transparent;
+  border: 1.5px solid #e0bfc3;
+  color: #333;
+}
+
+.secondary:hover {
+  background: #f8e7e9;
+}
+
+/* delete item */
+.danger {
+  background: #f3c7ca;
+  color: #6b2a2a;
+  border: 1px solid #e3aeb3;
+}
+
+.danger:hover {
+  background: #efb6bb;
+}
+
+/* delete all*/
+.danger-all {
+  background: #e3a6ab;
+  color: white;
+}
+
+.danger-all:hover {
+  background: #d99298;
 }
 
 /* CART */
@@ -172,79 +219,6 @@ body {
   border-radius: 15px;
 }
 
-.summary button {
-  margin-top: 10px;
-  margin-right: 10px;
-  padding: 8px 15px;
-  border: none;
-  background: var(--primary);
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-/* page title */
-.page-title {
-  padding: 20px;
-}
-
-/* top buttons */
-.top-actions {
-  margin: 0 20px;
-}
-
-/* ===== BUTTON BASE ===== */
-.btn {
-  background: var(--primary);
-  border: none;
-  padding: 10px 18px;
-  border-radius: 12px;
-  cursor: pointer;
-  text-decoration: none;
-  color: black;
-  display: inline-block;
-  transition: 0.25s;
-  font-size: 14px;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.95;
-}
-
-/* ===== SECONDARY (Back / Continue Shopping) ===== */
-.secondary {
-  background: transparent;
-  border: 1.5px solid #e0bfc3;
-  color: #333;
-}
-
-.secondary:hover {
-  background: #f8e7e9;
-}
-
-/* ===== DELETE (single item) ===== */
-.danger {
-  background: #f2c6c9;   /* أحمر وردي فاتح هادي */
-  color: #6b2a2a;
-  border: 1px solid #e3aeb3;
-}
-
-.danger:hover {
-  background: #edb3b7;
-}
-
-/* ===== DELETE ALL ===== */
-.danger-all {
-  background: #e3a6ab;   /* أقوى شوي لكن مو صارخ */
-  color: white;
-  border: none;
-}
-
-.danger-all:hover {
-  background: #d99298;
-}
-
-/* ===== LAYOUT (no visual chaos) ===== */
 .summary-actions {
   display: flex;
   gap: 10px;
@@ -253,8 +227,59 @@ body {
   align-items: center;
 }
 
+/* LAYOUT FIX  */
 .cart-actions {
   display: flex;
   gap: 10px;
   margin-top: 10px;
+}
+
+/* PAGE TEXT  */
+.page-title {
+  padding: 20px;
+}
+
+.top-actions {
+  margin: 0 20px;
+}
+
+/* empty cart */
+.empty {
+  padding: 20px;
+}
+
+/* unify ALL buttons height */
+.btn {
+  min-height: 38px;
+  line-height: 1;
+}
+
+/*  for "Continue Shopping" */
+.secondary,
+.danger,
+.danger-all {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* fix cart delete link overriding buttons */
+.cart-item a {
+  background: transparent;   
+  padding: 0;                
+  margin-top: 0;
+}
+
+.cart-item a.danger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-actions button,
+.cart-actions .btn {
+  height: 38px;
+}
+
+.summary-actions .btn {
+  height: 38px;
 }

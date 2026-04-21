@@ -100,7 +100,8 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
             <button name="clear" class="btn danger-all">Clear Cart</button>
         </form>
 
-        <button class="btn" onclick="alert('Order placed successfully!')">
+        <!-- FIXED BUTTON -->
+        <button class="btn primary-btn" onclick="alert('Order placed successfully!')">
             Buy Now
         </button>
 

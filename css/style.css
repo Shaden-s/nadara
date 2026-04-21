@@ -127,6 +127,7 @@ body {
   padding: 5px;
 }
 
+/* BUTTON SYSTEM */
 
 .btn {
   background: var(--primary);
@@ -141,10 +142,10 @@ body {
   align-items: center;
   justify-content: center;
 
-  gap: 6px;
   font-size: 14px;
-  min-height: 38px;
-  line-height: 1;
+  height: 38px;         
+  min-width: 120px;  
+  gap: 6px;
 
   transition: 0.25s ease;
   box-sizing: border-box;
@@ -155,7 +156,7 @@ body {
   opacity: 0.95;
 }
 
-
+/* secondary */
 .secondary {
   background: transparent;
   border: 1.5px solid #e0bfc3;
@@ -166,45 +167,68 @@ body {
   background: #f8e7e9;
 }
 
-
+/* delete single item */
 .danger {
   background: #f2b9bd;
   color: #5a2323;
   border: 1px solid #e0a3a8;
+  min-width: 100px;
 }
 
 .danger:hover {
   background: #efb6bb;
 }
 
-
+/* delete all (Clear Cart) */
 .danger-all {
   background: #e3a6ab;
   color: white;
+  min-width: 140px;
 }
 
 .danger-all:hover {
   background: #d99298;
 }
 
+/* CART */
+.cart {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
+.cart-item {
+  background: var(--card);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.cart-item img {
+  width: 120px;
+  border-radius: 10px;
+}
+
+/* IMPORTANT FIX */
 .cart-item a {
   text-decoration: none;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.cart-item .danger {
-  margin-top: 10px;
-}
-
-
+/* ACTIONS LAYOUT */
 .cart-actions {
   display: flex;
   gap: 10px;
   margin-top: 10px;
   align-items: center;
+}
+
+/* SUMMARY */
+.summary {
+  margin: 20px;
+  padding: 15px;
+  background: var(--card);
+  border-radius: 15px;
 }
 
 .summary-actions {
@@ -215,14 +239,30 @@ body {
   align-items: center;
 }
 
-.cart-actions .btn,
-.summary-actions .btn {
+/* unify buttons in summary too */
+.summary-actions .btn,
+.cart-actions .btn {
   height: 38px;
 }
 
-.btn {
-  min-height: 38px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+/* PAGE TEXT */
+.page-title {
+  padding: 20px;
+}
+
+.top-actions {
+  margin: 0 20px;
+}
+
+/* EMPTY CART */
+.empty {
+  padding: 20px;
+}
+
+.primary-btn {
+  background: #eac0c3;
+  font-weight: 600;
+}
+.primary-btn:hover {
+  background: #dfb1b5;
 }

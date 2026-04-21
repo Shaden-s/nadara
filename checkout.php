@@ -30,15 +30,15 @@ if(isset($_POST['update'])) {
 
 <body>
 
-<!-- page title -->
+<!-- Header -->
 <h2 class="page-title">Shopping Cart</h2>
 
-<!-- back button -->
+<!-- Top actions -->
 <div class="top-actions">
-    <a href="index.php" class="btn secondary">← Back to Home</a>
+    <a href="index.php" class="btn secondary">← Continue Shopping</a>
 </div>
 
-<!-- cart section -->
+<!-- Cart -->
 <div class="cart">
 
 <?php
@@ -59,53 +59,56 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
         $total += $item_total;
 ?>
 
-    <!-- single cart item -->
-    <div class="cart-item">
+<!-- Item Card -->
+<div class="cart-item">
 
-        <img src="images/<?php echo $row['image']; ?>">
+    <img src="images/<?php echo $row['image']; ?>">
 
+    <div class="item-info">
         <h3><?php echo $row['name']; ?></h3>
-
         <p>Price: <?php echo $row['price']; ?> SAR</p>
         <p>Total: <?php echo $item_total; ?> SAR</p>
-
-        <!-- modify quantity -->
-        <form method="post" class="cart-actions">
-            <input type="hidden" name="index" value="<?php echo $index; ?>">
-            <input type="number" name="qty" value="<?php echo $qty; ?>" min="1" class="qty">
-            <button name="update" class="btn">Modify</button>
-        </form>
-
-        <!-- delete item -->
-        <a href="checkout.php?delete=<?php echo $index; ?>" class="btn danger">Delete</a>
-
     </div>
+
+    <!-- Update -->
+    <form method="post" class="cart-actions">
+        <input type="hidden" name="index" value="<?php echo $index; ?>">
+        <input type="number" name="qty" value="<?php echo $qty; ?>" min="1" class="qty">
+        <button name="update" class="btn">Update</button>
+    </form>
+
+    <!-- Delete -->
+    <a href="checkout.php?delete=<?php echo $index; ?>" class="btn danger">Remove</a>
+
+</div>
 
 <?php
     }
 } else {
-    echo "<p class='empty'>Your cart is empty</p>";
+    echo "<p class='empty'>Your cart is empty 🛒</p>";
 }
 ?>
 
 </div>
 
-<!-- summary -->
+<!-- Summary -->
 <div class="summary">
 
     <h3>Total Price: <?php echo $total; ?> SAR</h3>
 
     <div class="summary-actions">
 
-        <!-- clear cart -->
+        <!-- Clear all -->
         <form method="post">
-            <button name="clear" class="btn danger-all">Delete All</button>
+            <button name="clear" class="btn danger-all">Clear Cart</button>
         </form>
 
-        <!-- buy -->
-        <button onclick="alert('Order placed successfully!')" class="btn">Buy</button>
+        <!-- Buy -->
+        <button class="btn primary-btn" onclick="alert('Order placed successfully!')">
+            Buy Now
+        </button>
 
-        <!-- continue shopping -->
+        <!-- Continue -->
         <a href="index.php" class="btn secondary">Continue Shopping</a>
 
     </div>

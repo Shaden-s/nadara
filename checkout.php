@@ -22,6 +22,9 @@ if(isset($_POST['update'])) {
 
 // check cart status
 $cart_empty = !isset($_SESSION['cart']) || empty($_SESSION['cart']);
+
+// total
+$total = 0;
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +35,18 @@ $cart_empty = !isset($_SESSION['cart']) || empty($_SESSION['cart']);
 </head>
 
 <body>
+
+<!-- HEADER (FIXED) -->
+<div class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" alt="logo">
+    </div>
+
+    <div class="nav-links">
+        <a href="index.php">Home</a>
+        <a href="checkout.php">Shopping Cart 🛒</a>
+    </div>
+</div>
 
 <!-- Page Title -->
 <h2 class="page-title">Shopping Cart</h2>
@@ -44,25 +59,22 @@ $cart_empty = !isset($_SESSION['cart']) || empty($_SESSION['cart']);
 <!-- Cart Section -->
 <div class="cart">
 
-<?php
-$total = 0;
+<?php if(!$cart_empty): ?>
 
-if(!$cart_empty) {
+<?php foreach($_SESSION['cart'] as $index => $item):
 
-    foreach($_SESSION['cart'] as $index => $item) {
+$id = $item['id'];
+$qty = $item['qty'];
 
-        $id = $item['id'];
-        $qty = $item['qty'];
+$sql = "SELECT * FROM products WHERE product_id = $id";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
 
-        $sql = "SELECT * FROM products WHERE product_id = $id";
-        $result = mysqli_query($conn, $sql);
-        $row = mysqli_fetch_assoc($result);
+$item_total = $row['price'] * $qty;
+$total += $item_total;
 
-        $item_total = $row['price'] * $qty;
-        $total += $item_total;
 ?>
 
-<!-- Cart Item -->
 <div class="cart-item">
 
     <img src="images/<?php echo $row['image']; ?>">
@@ -83,16 +95,15 @@ if(!$cart_empty) {
 
 </div>
 
-<?php
-    }
-} else {
-    echo "<p class='empty'>Your cart is empty 🛒</p>";
-}
-?>
+<?php endforeach; ?>
+
+<?php else: ?>
+    <p class="empty">Your cart is empty 🛒</p>
+<?php endif; ?>
 
 </div>
 
-<!-- Summary -->
+<!-- SUMMARY -->
 <div class="summary">
 
     <h3>Total Price: <?php echo $total; ?> SAR</h3>
@@ -116,8 +127,8 @@ if(!$cart_empty) {
 </div>
 
 <script>
-function buyNow(isEmpty) {
-    if(isEmpty) {
+function buyNow(isEmpty){
+    if(isEmpty){
         alert("Your cart is empty 🛒");
     } else {
         alert("Order placed successfully!");

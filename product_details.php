@@ -144,6 +144,8 @@ if(isset($_POST['add'])) {
             margin-bottom: 34px;
         }
 
+        
+
         .btn {
             background-color: var(--primary);
             color: black;
@@ -263,9 +265,9 @@ if(isset($_POST['add'])) {
                             Add to Cart
                         </button>
 
-                        <a href="checkout.php" class="btn">
+                        <button type="button" class="btn" onclick="location.href='checkout.php'">
                             Checkout
-                        </a>
+                        </button>
                     </div>
                 </form>
 

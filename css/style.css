@@ -181,3 +181,70 @@ body {
   border-radius: 10px;
   cursor: pointer;
 }
+
+/* page title */
+.page-title {
+  padding: 20px;
+}
+
+/* top buttons */
+.top-actions {
+  margin: 0 20px;
+}
+
+/* buttons */
+.btn {
+  background: var(--primary);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* delete item */
+.danger {
+  background: #e57373;
+  color: white;
+}
+
+.danger:hover {
+  background: #ef5350;
+}
+
+/* delete all */
+.danger-all {
+  background: #d66a6a;
+  color: white;
+}
+
+.danger-all:hover {
+  background: #c85c5c;
+}
+
+/* cart buttons layout */
+.cart-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* summary buttons */
+.summary-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* empty text */
+.empty {
+  padding: 20px;
+}

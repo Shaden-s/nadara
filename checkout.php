@@ -13,11 +13,10 @@ if(isset($_POST['clear'])) {
     unset($_SESSION['cart']);
 }
 
-// update quantity (MODIFY)
+// update quantity
 if(isset($_POST['update'])) {
     $index = $_POST['index'];
     $qty = $_POST['qty'];
-
     $_SESSION['cart'][$index]['qty'] = $qty;
 }
 ?>
@@ -31,10 +30,12 @@ if(isset($_POST['update'])) {
 
 <body>
 
-<h2 style="padding:20px;">Shopping Cart</h2>
+<h2 class="page-title">Shopping Cart</h2>
 
-<!-- 🔙 Back Button -->
-<a href="index.php" class="back-btn">← Back to Home</a>
+<!-- 🔙 Back -->
+<div class="top-actions">
+    <a href="index.php" class="btn">← Back to Home</a>
+</div>
 
 <div class="cart">
 
@@ -56,7 +57,6 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
         $total += $item_total;
 ?>
 
-    <!-- cart item -->
     <div class="cart-item">
 
         <img src="images/<?php echo $row['image']; ?>">
@@ -67,39 +67,42 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
         <p>Total: <?php echo $item_total; ?> SAR</p>
 
         <!-- MODIFY -->
-        <form method="post">
+        <form method="post" class="cart-actions">
             <input type="hidden" name="index" value="<?php echo $index; ?>">
-            <input type="number" name="qty" value="<?php echo $qty; ?>" min="1">
-            <button name="update">Modify</button>
+            <input type="number" name="qty" value="<?php echo $qty; ?>" min="1" class="qty">
+            <button name="update" class="btn">Modify</button>
         </form>
 
         <!-- DELETE -->
-        <a href="checkout.php?delete=<?php echo $index; ?>">Delete</a>
+        <a href="checkout.php?delete=<?php echo $index; ?>" class="btn danger">Delete</a>
 
     </div>
 
 <?php
     }
 } else {
-    echo "<p style='padding:20px;'>Your cart is empty</p>";
+    echo "<p class='empty'>Your cart is empty</p>";
 }
 ?>
 
 </div>
 
-<!-- summary -->
+<!-- 🧾 Summary -->
 <div class="summary">
 
     <h3>Total Price: <?php echo $total; ?> SAR</h3>
 
-    <form method="post">
-        <button name="clear">Delete All</button>
-    </form>
+    <div class="summary-actions">
 
-    <button onclick="alert('Order placed successfully!')">Buy</button>
+        <form method="post">
+            <button name="clear" class="btn danger-all">Delete All</button>
+        </form>
 
-    <!-- Continue shopping -->
-    <a href="index.php" class="btn">Continue Shopping</a>
+        <button onclick="alert('Order placed successfully!')" class="btn">Buy</button>
+
+        <a href="index.php" class="btn">Continue Shopping</a>
+
+    </div>
 
 </div>
 

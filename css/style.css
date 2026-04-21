@@ -47,7 +47,7 @@ body {
   color: gray;
 }
 
-/*  CATEGORIES */
+/* CATEGORIES */
 .categories {
   display: flex;
   justify-content: center;
@@ -64,7 +64,7 @@ body {
   cursor: pointer;
 }
 
-/*  PRODUCTS */
+/* PRODUCTS */
 .products {
   display: flex;
   justify-content: center;
@@ -105,7 +105,7 @@ body {
   font-weight: bold;
 }
 
-/*  PRODUCT PAGE */
+/* PRODUCT PAGE */
 .product-container {
   padding: 40px;
   display: flex;
@@ -142,15 +142,15 @@ body {
   gap: 6px;
   transition: 0.25s ease;
   font-size: 14px;
+  min-height: 38px;
+  line-height: 1;
 }
 
 .btn:hover {
   transform: translateY(-2px);
 }
 
-/* CHECKOUT ONLY BUTTON FIXES */
-
-/* secondary (Back / Continue) */
+/* SECONDARY BUTTON */
 .secondary {
   background: transparent;
   border: 1.5px solid #e0bfc3;
@@ -161,7 +161,7 @@ body {
   background: #f8e7e9;
 }
 
-/* delete item */
+/* DELETE ITEM  */
 .danger {
   background: #f3c7ca;
   color: #6b2a2a;
@@ -172,7 +172,7 @@ body {
   background: #efb6bb;
 }
 
-/* delete all*/
+/* DELETE ALL */
 .danger-all {
   background: #e3a6ab;
   color: white;
@@ -202,13 +202,7 @@ body {
 }
 
 .cart-item a {
-  display: inline-block;
-  margin-top: 10px;
-  background: var(--accent);
-  padding: 6px 12px;
-  border-radius: 8px;
   text-decoration: none;
-  color: black;
 }
 
 /* SUMMARY */
@@ -227,59 +221,25 @@ body {
   align-items: center;
 }
 
-/* LAYOUT FIX  */
+/* LAYOUT FIX */
 .cart-actions {
   display: flex;
   gap: 10px;
   margin-top: 10px;
 }
 
-/* PAGE TEXT  */
+/* PAGE TITLE */
 .page-title {
   padding: 20px;
 }
 
+/* TOP ACTIONS */
 .top-actions {
   margin: 0 20px;
 }
 
-/* empty cart */
+/* EMPTY CART */
 .empty {
   padding: 20px;
-}
-
-/* unify ALL buttons height */
-.btn {
-  min-height: 38px;
-  line-height: 1;
-}
-
-/*  for "Continue Shopping" */
-.secondary,
-.danger,
-.danger-all {
-  font-size: 14px;
-  font-weight: 500;
-}
-
-/* fix cart delete link overriding buttons */
-.cart-item a {
-  background: transparent;   
-  padding: 0;                
-  margin-top: 0;
-}
-
-.cart-item a.danger {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cart-actions button,
-.cart-actions .btn {
-  height: 38px;
-}
-
-.summary-actions .btn {
-  height: 38px;
+  color: #666;
 }

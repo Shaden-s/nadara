@@ -44,8 +44,6 @@ $total = 0;
     </div>
 
     <div class="nav-links">
-        <a href="index.php">Home</a>
-
         <?php if(basename($_SERVER['PHP_SELF']) != "checkout.php"): ?>
             <a href="checkout.php">Shopping Cart 🛒</a>
         <?php endif; ?>

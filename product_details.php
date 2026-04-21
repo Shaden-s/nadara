@@ -259,7 +259,7 @@ if(isset($_POST['add'])) {
                     </div>
 
                     <div class="btn-group">
-                        <button name="add" class="btn">
+                        <button type="submit" name="add" class="btn btn-large">
                             Add to Cart
                         </button>
 

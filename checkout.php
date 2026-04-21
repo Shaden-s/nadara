@@ -30,13 +30,15 @@ if(isset($_POST['update'])) {
 
 <body>
 
+<!-- page title -->
 <h2 class="page-title">Shopping Cart</h2>
 
-<!-- 🔙 Back -->
+<!-- back button -->
 <div class="top-actions">
-    <a href="index.php" class="btn">← Back to Home</a>
+    <a href="index.php" class="btn secondary">← Back to Home</a>
 </div>
 
+<!-- cart section -->
 <div class="cart">
 
 <?php
@@ -57,6 +59,7 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
         $total += $item_total;
 ?>
 
+    <!-- single cart item -->
     <div class="cart-item">
 
         <img src="images/<?php echo $row['image']; ?>">
@@ -66,14 +69,14 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
         <p>Price: <?php echo $row['price']; ?> SAR</p>
         <p>Total: <?php echo $item_total; ?> SAR</p>
 
-        <!-- MODIFY -->
+        <!-- modify quantity -->
         <form method="post" class="cart-actions">
             <input type="hidden" name="index" value="<?php echo $index; ?>">
             <input type="number" name="qty" value="<?php echo $qty; ?>" min="1" class="qty">
             <button name="update" class="btn">Modify</button>
         </form>
 
-        <!-- DELETE -->
+        <!-- delete item -->
         <a href="checkout.php?delete=<?php echo $index; ?>" class="btn danger">Delete</a>
 
     </div>
@@ -87,20 +90,23 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 
 </div>
 
-<!-- 🧾 Summary -->
+<!-- summary -->
 <div class="summary">
 
     <h3>Total Price: <?php echo $total; ?> SAR</h3>
 
     <div class="summary-actions">
 
+        <!-- clear cart -->
         <form method="post">
             <button name="clear" class="btn danger-all">Delete All</button>
         </form>
 
+        <!-- buy -->
         <button onclick="alert('Order placed successfully!')" class="btn">Buy</button>
 
-        <a href="index.php" class="btn">Continue Shopping</a>
+        <!-- continue shopping -->
+        <a href="index.php" class="btn secondary">Continue Shopping</a>
 
     </div>
 

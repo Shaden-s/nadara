@@ -28,6 +28,7 @@ if(isset($_POST['add'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $row['name']; ?></title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
         :root {
             --primary: #EFD9DC;
@@ -49,20 +50,6 @@ if(isset($_POST['add'])) {
         body {
             background-color: var(--bg-color);
             font-family: Arial, sans-serif;
-            color: black;
-        }
-
-        .top-bar {
-            width: 100%;
-            background-color: var(--primary);
-            color: black;
-            padding: 42px 56px;
-        }
-
-        .top-bar h2 {
-            margin: 0;
-            font-size: 24px;
-            font-weight: 700;
             color: black;
         }
 
@@ -230,9 +217,19 @@ if(isset($_POST['add'])) {
 </head>
 <body>
 
-    <div class="top-bar">
-        <h2>Nadara</h2>
+    <!-- Navbar -->
+<div class="navbar">
+
+    <div class="logo">
+        Nadara
     </div>
+
+    <div class="nav-links">
+        <a href="index.php">Home</a>
+        <a href="checkout.php">Shopping Cart 🛒</a>
+    </div>
+
+</div>
 
     <div class="page-wrapper">
 

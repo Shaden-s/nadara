@@ -36,16 +36,18 @@ $total = 0;
 
 <body>
 
-<!-- HEADER (FIXED) -->
+<!-- HEADER -->
 <div class="navbar">
+
     <div class="logo">
-        <img src="images/logo.png" alt="logo">
+        Nadara
     </div>
 
     <div class="nav-links">
         <a href="index.php">Home</a>
         <a href="checkout.php">Shopping Cart 🛒</a>
     </div>
+
 </div>
 
 <!-- Page Title -->

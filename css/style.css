@@ -13,11 +13,18 @@ body {
   background: var(--background);
 }
 
-/* LOGO
-.logo img{
-  height: 45px;
-  object-fit: contain;
-} */
+/* LOGO TEXT */
+.logo{
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.logo:hover{
+  opacity: 0.8;
+}
 
 /* NAVBAR */
 .navbar {

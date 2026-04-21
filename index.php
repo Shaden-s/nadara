@@ -11,13 +11,18 @@ include 'includes/config.php';
 <body>
 
 <!-- Navbar -->
-<nav class="navbar">
-    <h2>Nadara</h2>
+<div class="navbar">
+
+    <div class="logo">
+        Nadara
+    </div>
+
     <div class="nav-links">
         <a href="index.php">Home</a>
         <a href="checkout.php">Shopping Cart 🛒</a>
     </div>
-</nav>
+
+</div>
 
 <!-- Hero -->
 <section class="hero">

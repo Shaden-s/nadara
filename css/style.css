@@ -146,31 +146,29 @@ body {
 /* BUTTON SYSTEM */
 
 .btn {
-  background: var(--primary);
-  border: none;
-  color: black;
+    background-color: var(--primary);
+    color: black;
+    border: none;
 
-  padding: 0 28px;
-  height: 48px;
+    height: 48px;
+    padding: 0 28px;
+    border-radius: 16px;
 
-  border-radius: 16px;
-  font-size: 16px;
-  font-weight: 600;
+    font-size: 16px;
+    font-weight: 600;
 
-  cursor: pointer;
-  text-decoration: none;
+    cursor: pointer;
+    text-decoration: none;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-  transition: 0.3s ease;
+    transition: var(--transition);
 }
 
 .btn:hover {
-  background: var(--primary-hover);
-  transform: translateY(-2px);
-  opacity: 0.95;
+    background-color: var(--primary-hover);
 }
 
 .cart-actions .btn,
@@ -190,18 +188,18 @@ body {
 
 /* secondary */
 .secondary {
-  background: #f6e4e6;
-  border: 1px solid #e6cdd1;
-  color: #333;
+  background: var(--primary);
+  opacity: 0.7;
+  color: black;
 }
 
-/* buy */
 .secondary:hover {
   background: #efd9dc;
 }
 
+/* buy */
 .buy-btn {
-  font-weight: 700; /* بولد */
+  font-weight: 700; 
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
@@ -211,25 +209,24 @@ body {
 
 /* delete single item */
 .danger {
-  background: #f8d7da;
-  color: #7a2e2e;
-  border: 1px solid #f1b0b7;
-  min-width: 100px;
+    background: #f8d7da;
+    color: #b00020;
+    border: 1px solid #f1b0b7;
 }
 
 .danger:hover {
-  background: #efb6bb;
+    background: #f3b9bf;
 }
 
 /* delete all (Clear Cart) */
 .danger-all {
-  background: #eabfc3;
-  color: #5a2323;
-  min-width: 140px;
+    background: transparent;
+    border: 2px solid #e57373;
+    color: black;
 }
 
 .danger-all:hover {
-  background: #d99298;
+    background: #fce4e6;
 }
 
 /* CART */

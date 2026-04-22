@@ -189,19 +189,21 @@ body {
   background: #f8e7e9;
 }
 
+/* BACK BUTTON */
 .back-btn {
   display: inline-block;
   text-decoration: none;
-  background-color: var(--primary);
+  background: #EFD9DC;
   color: black;
-  padding: 12px 20px;
-  border-radius: 14px;
-  font-size: 14px;
-  transition: 0.25s;
+  padding: 14px 22px;
+  border-radius: 18px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease;
 }
 
 .back-btn:hover {
-  background-color: #dfb1b5;
+  background: #e6cdd1;
 }
 
 /* delete single item */
@@ -246,7 +248,7 @@ body {
   border-radius: 10px;
 }
 
-/* IMPORTANT FIX */
+
 .cart-item a {
   text-decoration: none;
   display: inline-flex;
@@ -276,7 +278,7 @@ body {
   align-items: center;
 }
 
-/* unify buttons in summary too */
+/* unify buttons in summary */
 .summary-actions .btn,
 .cart-actions .btn {
   height: 38px;

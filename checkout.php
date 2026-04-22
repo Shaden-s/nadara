@@ -56,7 +56,7 @@ $total = 0;
 
 <!-- Top Action -->
 <div class="top-actions">
-    <a href="index.php" class="btn">← Back to products</a>
+    <a href="index.php" class="btn secondary">← Back to products</a>
 </div>
 
 <!-- Cart Section -->
@@ -91,7 +91,7 @@ $total += $item_total;
     <form method="post" class="cart-actions">
         <input type="hidden" name="index" value="<?php echo $index; ?>">
         <input type="number" name="qty" value="<?php echo $qty; ?>" min="1" class="qty">
-        <button name="update" class="btn">Update</button>
+        <button name="update" class="btn secondary">Update</button>
     </form>
 
     <a href="checkout.php?delete=<?php echo $index; ?>" class="btn danger">Remove</a>
@@ -119,7 +119,7 @@ $total += $item_total;
             </button>
         </form>
 
-        <button class="btn primary-btn" onclick="buyNow(<?php echo $cart_empty ? 'true' : 'false'; ?>)">
+        <button class="btn buy-btn" onclick="buyNow(<?php echo $cart_empty ? 'true' : 'false'; ?>)">
             Buy Now
         </button>
 

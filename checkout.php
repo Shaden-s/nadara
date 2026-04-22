@@ -56,7 +56,7 @@ $total = 0;
 
 <!-- Top Action -->
 <div class="top-actions">
-    <a href="index.php" class="back-btn">← Back to products</a>
+    <a href="index.php" class="btn">← Back to products</a>
 </div>
 
 <!-- Cart Section -->

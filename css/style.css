@@ -190,23 +190,6 @@ body {
   background: #f8e7e9;
 }
 
-/* BACK BUTTON */
-.back-btn {
-  display: inline-block;
-  text-decoration: none;
-  background-color: var(--primary);
-  color: black;
-  padding: 14px 22px;
-  border-radius: 18px;
-  font-size: 16px;
-  font-weight: 500;
-  transition: 0.3s ease;
-  margin-bottom: 35px;
-}
-
-.back-btn:hover {
-  background-color: var(--primary-hover);
-}
 
 /* delete single item */
 .danger {

@@ -193,13 +193,14 @@ body {
 .back-btn {
   display: inline-block;
   text-decoration: none;
-  background: #EFD9DC;
+  background: var(--primary);
   color: black;
   padding: 14px 22px;
   border-radius: 18px;
   font-size: 16px;
   font-weight: 500;
   transition: 0.3s ease;
+  margin-bottom: 35px; /* أضفناها */
 }
 
 .back-btn:hover {

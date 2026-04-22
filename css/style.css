@@ -201,24 +201,25 @@ body {
 
 /* delete single item */
 .danger {
-    background: #f8d7da;
+    background: #efd9dc;  
+    border: 1px solid #e57373;
     color: #b00020;
-    border: 1px solid #f1b0b7;
 }
 
 .danger:hover {
-    background: #f3b9bf;
+    background: #f8d7da;
 }
 
 /* delete all (Clear Cart) */
 .danger-all {
-    background: transparent;
-    border: 2px solid #e57373;
+    background: #efd9dc;  
+    border: 1px solid #e6cdd1;
     color: black;
+    opacity: 0.8;
 }
 
 .danger-all:hover {
-    background: #fce4e6;
+    background: #e6cdd1;
 }
 
 /* CART */

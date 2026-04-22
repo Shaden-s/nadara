@@ -297,11 +297,3 @@ body {
 .empty {
   padding: 20px;
 }
-
-.primary-btn {
-  background: #eac0c3;
-  font-weight: 600;
-}
-.primary-btn:hover {
-  background: #dfb1b5;
-}

@@ -189,6 +189,21 @@ body {
   background: #f8e7e9;
 }
 
+.back-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--primary);
+  color: black;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-size: 14px;
+  transition: 0.25s;
+}
+
+.back-btn:hover {
+  background-color: #dfb1b5;
+}
+
 /* delete single item */
 .danger {
   background: #f2b9bd;

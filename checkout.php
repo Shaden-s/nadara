@@ -56,7 +56,7 @@ $total = 0;
 
 <!-- Top Action -->
 <div class="top-actions">
-    <a href="index.php" class="btn secondary">← Continue Shopping</a>
+    <a href="index.php" class="back-btn">← Back to products</a>
 </div>
 
 <!-- Cart Section -->
@@ -123,7 +123,15 @@ $total += $item_total;
             Buy Now
         </button>
 
-        <a href="index.php" class="btn secondary">Continue Shopping</a>
+        <?php if(isset($_SESSION['last_product'])): ?>
+            <a href="product_details.php?id=<?php echo $_SESSION['last_product']; ?>" class="btn secondary">
+                Continue Shopping
+            </a>
+        <?php else: ?>
+            <a href="index.php" class="btn secondary">
+                Continue Shopping
+            </a>
+        <?php endif; ?>
 
     </div>
 

@@ -3,7 +3,7 @@ include 'includes/config.php';
 session_start();
 
 $id = isset($_GET['id']) ? $_GET['id'] : 1;
-
+$_SESSION['last_product'] = $id;
 $sql = "SELECT * FROM products WHERE product_id = $id";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);

@@ -1,5 +1,6 @@
 :root {
   --primary: #E8B4B8;
+  --primary-hover: #e6cdd1;
   --background: #F9F5F3;
   --text: #333;
   --white: #fff;
@@ -193,18 +194,18 @@ body {
 .back-btn {
   display: inline-block;
   text-decoration: none;
-  background: var(--primary);
+  background-color: var(--primary);
   color: black;
   padding: 14px 22px;
   border-radius: 18px;
   font-size: 16px;
   font-weight: 500;
   transition: 0.3s ease;
-  margin-bottom: 35px; /* أضفناها */
+  margin-bottom: 35px;
 }
 
 .back-btn:hover {
-  background: #e6cdd1;
+  background-color: var(--primary-hover);
 }
 
 /* delete single item */

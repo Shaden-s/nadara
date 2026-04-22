@@ -236,6 +236,12 @@ body {
   border-radius: 15px;
 }
 
+.cart-item .btn {
+  height: 38px;
+  padding: 0 18px;
+  font-size: 14px;
+}
+
 .cart-item img {
   width: 120px;
   border-radius: 10px;

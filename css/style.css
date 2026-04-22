@@ -117,7 +117,7 @@ body {
 }
 
 .card p {
-  color: var(--primary);
+  color: #af5f6bed; 
   font-weight: bold;
 }
 

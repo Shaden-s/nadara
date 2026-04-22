@@ -146,9 +146,9 @@ body {
 /* BUTTON SYSTEM */
 
 .btn {
-    background-color: var(--primary);
+    background-color: #efd9dc;
     color: black;
-    border: none;
+    border: 1px solid #e6cdd1;
 
     height: 48px;
     padding: 0 28px;
@@ -164,11 +164,12 @@ body {
     align-items: center;
     justify-content: center;
 
-    transition: var(--transition);
+    transition: 0.25s ease;
 }
 
 .btn:hover {
-    background-color: var(--primary-hover);
+    background-color: #e6cdd1;
+    transform: translateY(-2px);
 }
 
 .cart-actions .btn,
@@ -197,15 +198,6 @@ body {
   background: #efd9dc;
 }
 
-/* buy */
-.buy-btn {
-  font-weight: 700; 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.buy-btn:hover {
-  transform: translateY(-2px) scale(1.02);
-}
 
 /* delete single item */
 .danger {

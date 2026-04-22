@@ -119,7 +119,7 @@ $total += $item_total;
             </button>
         </form>
 
-        <button class="btn buy-btn" onclick="buyNow(<?php echo $cart_empty ? 'true' : 'false'; ?>)">
+        <button class="btn" onclick="buyNow(<?php echo $cart_empty ? 'true' : 'false'; ?>)">
             Buy Now
         </button>
 
